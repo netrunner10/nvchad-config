@@ -1,4 +1,3 @@
-local lazy = require "lazy"
 return {
   {
     "stevearc/conform.nvim",
@@ -37,8 +36,6 @@ return {
         "lua",
         "vimdoc",
         "yaml",
-        "html",
-        "css",
         "go",
         "gomod",
         "gowork",
@@ -207,5 +204,11 @@ return {
     config = function()
       require("todo-comments").setup()
     end,
+  },
+
+  {
+    "b0o/SchemaStore.nvim",
+    lazy = true,
+    version = false, -- last release is way too old
   },
 }

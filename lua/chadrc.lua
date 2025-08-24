@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "material-darker",
+  theme = "monochrome",
   transparency = true,
 
   hl_override = {
@@ -15,7 +15,7 @@ M.base46 = {
   },
 }
 
-M.nvdash = { load_on_startup = true }
+-- M.nvdash = { load_on_startup = true }
 M.ui = {
   tabufline = {
     lazyload = false,
