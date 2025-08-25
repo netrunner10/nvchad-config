@@ -36,6 +36,7 @@ return {
         "lua",
         "vimdoc",
         "yaml",
+        "dockerfile",
         "go",
         "gomod",
         "gowork",
@@ -52,6 +53,7 @@ return {
         "lua-language-server",
         "stylua",
         "yamlls",
+        "hadolint",
         "gopls",
         "goimports",
         "gofumpt",
@@ -210,5 +212,15 @@ return {
     "b0o/SchemaStore.nvim",
     lazy = true,
     version = false, -- last release is way too old
+  },
+
+  {
+    "mfussenegger/nvim-lint",
+    optional = true,
+    opts = {
+      linters_by_ft = {
+        dockerfile = { "hadolint" },
+      },
+    },
   },
 }

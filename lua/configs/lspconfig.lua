@@ -87,3 +87,15 @@ lspconfig.yamlls.setup {
     },
   },
 }
+
+lspconfig.dockerls.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+}
+
+lspconfig.docker_compose_language_service.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+}
