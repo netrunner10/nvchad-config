@@ -25,3 +25,4 @@ o.signcolumn = "yes"
 
 o.updatetime = 50
 
+o.clipboard = "unnamedplus"
