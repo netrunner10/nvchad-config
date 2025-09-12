@@ -18,8 +18,9 @@
 
 # Install 
 
+Linux/MacOS
+
 ```bash
-# Linux/MacOS
 git clone https://github.com/netrunner10/nvchad-go-config.git ~/.config/nvim && nvim
 ```
 
@@ -28,8 +29,10 @@ git clone https://github.com/netrunner10/nvchad-go-config.git ~/.config/nvim && 
 - Learn customization of ui & base46 from `:h nvui`
 
 # Uninstall
+
+Linux/MacOS
+
 ```bash
-# Linux/MacOS
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
