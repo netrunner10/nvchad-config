@@ -44,11 +44,3 @@ end, { desc = "Step Over" })
 -- Git
 map("n", "<leader>go", ":DiffviewOpen<CR>", { desc = "Open Git Diff View" })
 map("n", "<leader>gc", ":DiffviewClose<CR>", { desc = "Close Git Diff View" })
-
--- Terminal
-map("n", "<C-`>", function()
-  require("nvchad.term").toggle { pos = "float" }
-end)
-map("t", "<C-`>", function()
-  require("nvchad.term").toggle { pos = "float" }
-end)
