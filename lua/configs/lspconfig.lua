@@ -5,16 +5,20 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local servers = {
-  gopls = {
+  jsonls = {
     on_attach = on_attach,
     on_init = on_init,
     capabilities = capabilities,
+    on_new_config = function(new_config)
+      new_config.settings.json.schemas = new_config.settings.json.schemas or {}
+      vim.list_extend(new_config.settings.json.schemas, require("schemastore").json.schemas())
+    end,
     settings = {
-      usePlaceholders = true,
-      gofumpt = true,
-      hints = {
-        parameterNames = true,
-        compositeLiteralFields = true,
+      json = {
+        format = {
+          enable = true,
+        },
+        validate = { enable = true },
       },
     },
   },
@@ -89,20 +93,16 @@ local servers = {
     capabilities = capabilities,
   },
 
-  jsonls = {
+  gopls = {
     on_attach = on_attach,
     on_init = on_init,
     capabilities = capabilities,
-    on_new_config = function(new_config)
-      new_config.settings.json.schemas = new_config.settings.json.schemas or {}
-      vim.list_extend(new_config.settings.json.schemas, require("schemastore").json.schemas())
-    end,
     settings = {
-      json = {
-        format = {
-          enable = true,
-        },
-        validate = { enable = true },
+      usePlaceholders = true,
+      gofumpt = true,
+      hints = {
+        parameterNames = true,
+        compositeLiteralFields = true,
       },
     },
   },
