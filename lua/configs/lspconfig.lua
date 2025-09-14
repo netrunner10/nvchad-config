@@ -111,6 +111,12 @@ local servers = {
       },
     },
   },
+
+  pyright = {
+    on_attach = on_attach,
+    on_init = on_init,
+    capabilities = capabilities,
+  },
 }
 
 for name, opts in pairs(servers) do
