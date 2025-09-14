@@ -1,7 +1,7 @@
 -- This file needs to have same structure as nvconfig.lua
 -- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
 -- Please read that file to know all available options :(
-require "lua.nvdash_headers"
+local headers = require "utils.headers"
 
 ---@type ChadrcConfig
 local M = {}
@@ -18,7 +18,7 @@ M.base46 = {
 
 M.nvdash = {
   load_on_startup = true,
-  header = Nvdash_headers[math.random(1, #Nvdash_headers)],
+  header = headers[math.random(1, #headers)],
 }
 M.ui = {
   tabufline = {
