@@ -98,7 +98,12 @@ local servers = {
     on_init = on_init,
     capabilities = capabilities,
     settings = {
+      analyses = {
+        unusedparams = true,
+      },
+      completeUnimported = true,
       usePlaceholders = true,
+      staticcheck = true,
       gofumpt = true,
       hints = {
         parameterNames = true,
