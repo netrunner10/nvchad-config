@@ -4,6 +4,7 @@ return {
   opts = {
     linters_by_ft = {
       dockerfile = { "hadolint" },
+      python = { "flake8" },
     },
   },
 }
